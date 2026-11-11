@@ -30,6 +30,7 @@ ul {
   background-color: var(--bg-color);
   min-height: 100vh;
   position: relative;
+  background-attachment: fixed;
 }
 
 .decorated-zone {
@@ -38,7 +39,7 @@ ul {
 
 .decorated-zone::before,
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -60,8 +61,7 @@ ul {
 }
 
 .header {
-  min-height: 100vh;
-  min-height: 668px;
+  min-height: max(100vh, 668px);
   position: relative;
   background-image: var(--bg-image);
   background-size: cover;
@@ -72,7 +72,7 @@ ul {
 .header__rec {
   position: absolute;
   top: 10px;
-  right: 38px; 
+  right: 38px;
   font-family: var(--font-main);
   font-size: 18px;
   font-weight: 400;
@@ -82,7 +82,7 @@ ul {
 }
 
 .header__rec::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 9px;
   height: 9px;
@@ -113,9 +113,9 @@ ul {
   font-size: 18px;
   text-transform: lowercase;
   cursor: pointer;
-  width: 70px;         
+  width: 70px;
   height: 26px;
-  padding: 0 13px;     
+  padding: 0 13px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,8 +168,8 @@ ul {
 
 .title-decor {
   background-color: var(--accent-color);
-  color: #1b1919; 
-  padding: 0px 10px 0px 0; 
+  color: #1b1919;
+  padding: 0px 10px 0px 0;
   display: inline-block;
 }
 
@@ -177,7 +177,7 @@ ul {
   padding: 40px 10px;
   display: flex;
   flex-direction: column;
-  gap: 50px; 
+  gap: 50px;
 }
 
 .section__title {
@@ -239,7 +239,7 @@ ul {
 .gallery-section {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .gallery__title {
@@ -259,8 +259,7 @@ ul {
 }
 
 .footer {
-  min-height: 100vh;
-  min-height: 668px;
+  min-height: max(100vh, 668px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,22 +280,23 @@ ul {
   text-shadow: 2px 0 0 var(--accent-color);
 }
 
-.tablet-br, .desktop-br {
+.tablet-br,
+.desktop-br {
   display: none;
 }
 
 @media (min-width: 768px) {
   .header {
     display: block;
-    height: 100vh;  
+    height: 100vh;
     position: relative;
-    padding: 0; 
+    padding: 0;
   }
 
   .header__rec {
     position: absolute;
     top: 20px;
-    right: 29px; 
+    right: 29px;
   }
 
   .header__theme-menu {
@@ -315,7 +315,7 @@ ul {
   .header__title {
     position: absolute;
     top: 50%;
-    left: 0; 
+    left: 0;
     transform: translateY(-50%);
     margin: 0;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -328,9 +328,9 @@ ul {
   .header__subtitle {
     position: absolute;
     top: 724px;
-    right: 20px; 
-    left: auto;  
-    width: 364px; 
+    right: 20px;
+    left: auto;
+    width: 364px;
     margin: 0;
   }
 
@@ -346,7 +346,7 @@ ul {
 
   .main {
     padding: 60px 20px;
-    gap: 80px; 
+    gap: 80px;
   }
 
   .section {
@@ -377,7 +377,7 @@ ul {
 
   .section:nth-child(2) .section__list {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 
   .tablet-br {
@@ -387,7 +387,7 @@ ul {
   .gallery-section {
     display: flex;
     flex-direction: column;
-    gap: 0; 
+    gap: 0;
   }
 
   .gallery__title {
@@ -397,7 +397,7 @@ ul {
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
@@ -430,16 +430,16 @@ ul {
   .gallery__image:nth-child(5) {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
-  }  
+  }
 
   .footer {
-    height: 100vh; 
+    height: 100vh;
     padding: 20px;
   }
 
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
-    text-shadow: 4px 4px 0 var(--accent-color); 
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    text-shadow: 4px 4px 0 var(--accent-color);
   }
 }
 
@@ -460,8 +460,8 @@ ul {
 
   .header__subtitle {
     position: absolute;
-    top: 563px; 
-    left: 513px; 
+    top: 563px;
+    left: 513px;
     right: auto;
     width: 500px;
     margin: 0;
@@ -484,7 +484,7 @@ ul {
 
   .section:not(:nth-child(2)) .section__list {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 
   .section:nth-child(2) {
@@ -494,12 +494,12 @@ ul {
   }
 
   .section:nth-child(2) .tablet-br {
-    display: none; 
+    display: none;
   }
 
   .section:nth-child(2) .section__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .gallery {
